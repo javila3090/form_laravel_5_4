@@ -74,7 +74,6 @@ $(document).ready(function(){
                     $("#edad").val(data);
                 },
                 error   : function( xhr, err ) {
-                    //alert('Error'+err+xhr);
                     console.log(err);
                 }
             });
