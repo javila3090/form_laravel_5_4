@@ -40,3 +40,8 @@ Route::get('personas/eliminar/{persona}', [
     'as' => 'personas/eliminar',
     'uses' => 'PersonaController@destroy'
 ]);
+
+Route::get('personas/calcular/{fecha}', [
+    'as' => 'personas/calcular/{fecha}',
+    'uses' => 'PersonaController@calcularEdad'
+]);

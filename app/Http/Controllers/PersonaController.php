@@ -6,6 +6,7 @@ use App\Persona;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class PersonaController extends Controller
 {
@@ -127,5 +128,15 @@ class PersonaController extends Controller
         $request->session()->flash('message.content', '¡Registro eliminado con &eacute;xito!');
         return redirect('personas/lista');
 
+    }
+
+    /**
+     * @param $fecha
+     * @return mixed
+     */
+    public function calcularEdad(){
+        $fecha = $_GET['fecha'];
+        $edad = Carbon::parse($fecha)->age;
+        return $edad;
     }
 }

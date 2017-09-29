@@ -66,26 +66,25 @@ $(document).ready(function(){
             $(this).css("border-color", "#2eb82e");
             $('#submit').attr('disabled',false);
             $("#error_dob").text("");
+            $.ajax({
+                url: "personas/calcular/{fecha}",
+                type: "GET",
+                data: { fecha: $(this).val() },
+                success : function( data ) {
+                    $("#edad").val(data);
+                },
+                error   : function( xhr, err ) {
+                    //alert('Error'+err+xhr);
+                    console.log(err);
+                }
+            });
         }
     });
     $("#genero").focusout(function(){
         $(this).css("border-color", "#2eb82e");
 
     });
-    $("#edad").focusout(function(){
-        if($(this).val()==''){
-            $(this).css("border-color", "#FF0000");
-            $('#submit').attr('disabled',true);
-            $("#error_age").text("* Debes ingresar su edad");
-        }
-        else
-        {
-            $(this).css({"border-color":"#2eb82e"});
-            $('#submit').attr('disabled',false);
-            $("#error_age").text("");
 
-        }
-    });
     $("#telefono").focusout(function(){
         $pho =$("#telefono").val();
         if($(this).val()==''){
