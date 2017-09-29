@@ -41,7 +41,7 @@ Route::get('personas/eliminar/{persona}', [
     'uses' => 'PersonaController@destroy'
 ]);
 
-Route::get('personas/calcular/{fecha}', [
-    'as' => 'personas/calcular/{fecha}',
+Route::get('/calcular/{fecha}', [
+    'as' => '/calcular/{fecha}',
     'uses' => 'PersonaController@calcularEdad'
 ]);

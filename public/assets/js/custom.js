@@ -67,7 +67,7 @@ $(document).ready(function(){
             $('#submit').attr('disabled',false);
             $("#error_dob").text("");
             $.ajax({
-                url: "personas/calcular/{fecha}",
+                url: "/calcular/{fecha}",
                 type: "GET",
                 data: { fecha: $(this).val() },
                 success : function( data ) {
@@ -121,8 +121,6 @@ $(document).ready(function(){
         }
     });
 
-
-
     $("#registroForm").submit(function(event) {
         event.preventDefault();
         if($("#nombres" ).val()=='')
@@ -165,15 +163,11 @@ $(document).ready(function(){
             url: $(this).attr("action"),
             type: $(this).attr("method"),
             data: $(this).serialize(),
-            /*beforeSend: function(){
-                $("#resultado").html("<img src='assets/img/Ripple.gif'/> Enviando...");
-            },*/
             success : function( data ) {
                 $('#registroForm')[0].reset();
                 $("#resultado").html(data);
             },
             error   : function( xhr, err ) {
-                //alert('Error'+err+xhr);
                 console.log(err);
             }
         });

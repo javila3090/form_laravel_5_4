@@ -28,14 +28,14 @@
                     <span id="error_lastname" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    {!! Form::label('edad', 'Edad') !!} <span class="mandatory">*</span>
-                    {!! Form::number('edad', null, ['id' => 'edad', 'class' => 'form-control', 'min'=>'1']) !!}
-                    <span id="error_age" class="text-danger"></span>
-                </div>
-                <div class="form-group">
                     {!! Form::label('fecha_nac', 'Fecha de nacimiento') !!} <span class="mandatory">*</span>
                     {!! Form::date('fecha_nac', null, ['id' => 'fecha_nac', 'class' => 'form-control']) !!}
                     <span id="error_dob" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('edad', 'Edad') !!} <span class="mandatory">*</span>
+                    {!! Form::number('edad', null, ['id' => 'edad', 'class' => 'form-control', 'min'=>'1', 'readonly']) !!}
+                    <span id="error_age" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     {!! Form::label('genero', 'Género') !!}
