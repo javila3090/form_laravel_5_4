@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+Created on : 11/08/2017, 09:10:50 AM
+Author     : Julio
+*/
+@CHARSET "UTF-8";
+@font-face {
+    font-family: 'Roboto';
+
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AmaticSC';
+
+    src: url('../fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gloria_Hallelujah';
+
+    src: url('../fonts/Gloria_Hallelujah/GloriaHallelujah.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Josefin_Slab';
+
+    src: url('../fonts/Josefin_Slab/JosefinSlab-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'KaushanScript';
+
+    src: url('../fonts/Kaushan_Script/KaushanScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cuprum';
+
+    src: url('../fonts/Cuprum/Cuprum-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Cuprum', sans-serif !important;
+    padding-top: 8%;
+    font-size: 14px !important;
+    letter-spacing: 1.5px;
+
+}
+.mandatory{
+    color:red;
+}
+footer {
+    margin: 50px 0;
+}
+
+/************ CUSTOMIZANDO ELEMENTOS DE BOOSTRAP ************/
+
+.panel-primary
+{
+    border-color: #bce8f1;
+}
+.panel-primary>.panel-heading
+{
+    background:#bce8f1;
+
+}
+.panel-primary>.panel-body
+{
+    background-color: #EDEDED;
+}
